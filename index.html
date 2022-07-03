@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>The Photography</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    ul,
+    ol,
+    li {
+      list-style: none;
+    }
+    .container {
+      width: 100%;
+      max-width: 1168px;
+
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .btn{
+        cursor: pointer;
+
+        font-family: 'Lora', serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #000000;
+
+        padding: 0 25px;
+        height: 52px;
+
+        background: transparent;
+        border: 2px solid #000000;
+
+        transition: .4s;
+    }
+    .btn.big{
+        padding: 0 35px;
+        height: 58px;
+    }
+    .btn.white{
+        color: #fff;
+        border-color: #ffffff;
+    }
+    .btn:hover{
+        background: #000000;
+        color: #fff;
+    }
+    .btn.white:hover{
+        background: #fff;
+        color: #000;
+    }
+    .menu a{
+        cursor: pointer;
+        
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .menu a:hover{
+        text-decoration: underline;
+    }
+  </style>
+  <body>
+    <header>
+      <div class="container">
+        <a>
+          <img src="/assets/PhotoLogo.svg" alt="Logo The Photography" />
+        </a>
+        <nav class="menu">
+          <ul>
+            <li>
+              <a>ABOUT</a>
+            </li>
+            <li>
+              <a>PORTFOLIO</a>
+            </li>
+          </ul>
+          <button class="btn">Contact us</button>
+        </nav>
+      </div>
+    </header>
+  </body>
+</html>
