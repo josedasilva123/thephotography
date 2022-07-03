@@ -1,0 +1,29 @@
+.title {
+  font-family: "Lora", serif;
+  font-weight: 500;
+  color: #000000;
+}
+
+.title.one {
+  font-size: 54px;
+}
+
+.title.two {
+  font-size: 42px;
+}
+
+.title.three {
+  font-size: 28px;
+}
+
+.title.four {
+  font-size: 22px;
+}
+
+.title.center {
+  text-align: center;
+}
+
+.title.white {
+  color: #fff;
+}
