@@ -20,10 +20,107 @@
   font-size: 22px;
 }
 
-.title.center {
-  text-align: center;
+@media (max-width: 1000px){
+  .title.one {
+    font-size: 44px;
+  }
+  
+  .title.two {
+    font-size: 36px;
+  }
+  
+  .title.three {
+    font-size: 24px;
+  }
+  
+  .title.four {
+    font-size: 20px;
+  }    
 }
 
-.title.white {
+@media (max-width: 600px){
+  .title.one {
+    font-size: 36px;
+  }
+  
+  .title.two {
+    font-size: 28px;
+  }
+  
+  .title.three {
+    font-size: 20px;
+  }
+  
+  .title.four {
+    font-size: 18px;
+  }   
+}
+
+.label{
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.paragraph{
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.title.italic,
+.label.italic,
+.paragraph.italic{
+  font-style: italic;
+}
+
+.title.center,
+.label.center,
+.paragraph.center {
+  text-align: center;
+}  
+
+.title.white,
+.label.white,
+.paragraph.white {
   color: #fff;
+}
+
+.content-box{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content-box p,
+.content-box li{
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6; 
+}
+
+.context-box b{
+  font-weight: 600;
+}
+
+.context-box i{
+  font-style: italic;
+}
+
+.content-box ul,
+.content-box ol{
+  padding-left: 25px;
+}
+
+.content-box ul,
+.content-box ul li{
+  list-style: circle;
+}
+
+.content-box ol,
+.content-box ol li{
+  list-style: decimal;
 }

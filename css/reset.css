@@ -9,3 +9,12 @@ ol,
 li {
   list-style: none;
 }
+
+a{
+  display: inline-flex;
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+}
