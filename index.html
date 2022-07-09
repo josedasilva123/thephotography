@@ -10,11 +10,53 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/pages/index.css">
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/pages/index.css" />
     <title>The Photography</title>
   </head>
-  
+
+  <style>
+    .basic-content .flex-grid {
+      display: flex;
+      gap: 80px;
+    }
+    @media (max-width: 700px) {
+      .basic-content .flex-grid {
+        flex-direction: column;
+        gap: 36px;
+      }
+    }
+
+    .dynamic-content .flex-grid{
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+    .dynamic-content .flex-grid .left,
+    .dynamic-content .flex-grid .right{
+      width: 100%;
+    }
+    @media (max-width: 700px){
+      .dynamic-content .flex-grid{
+        flex-direction: column;
+      }
+
+      .dynamic-content.reverse .flex-grid{
+        flex-direction: column-reverse;
+      }
+
+      .dynamic-content .image-grid{
+        display: flex;
+        justify-content: center;
+      }
+    }
+    @media (max-width: 425px){
+      .dynamic-content .flex-grid .content-grid .btn{ 
+        width: 100%;
+      }  
+    }
+  </style>
+
   <body>
     <header>
       <div class="container">
@@ -36,8 +78,80 @@
         </div>
       </div>
     </header>
-    <div style="background: #000000">
-      <h1 class="title four center white">Título de teste</h1>
-    </div>
+    <section id="main-banner" class="dynamic-content reverse">
+      <div class="container">
+        <div class="flex-grid">
+          <div class="left content-grid">
+            <label class="label">Photo website</label>
+
+            <h1 class="title one m-bottom1">The Photography</h1>
+
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              ut velit ut leo placerat vehicula in quis nisi. Curabitur quis
+              efficitur mauris. Donec non eros molestie, ultrices nulla
+              suscipit, pharetra diam.
+            </p>
+
+            <div class="m-top4">
+              <a href="" class="btn big">Read more</a>
+            </div>
+          </div>
+          <div class="right image-grid">
+            <img src="/assets/Foto1.jpg" alt="Close olho" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="basic-content section-padding">
+      <div class="container">
+        <div class="flex-grid">
+          <div class="left">
+            <h2 class="title two">I love photography</h2>
+          </div>
+          <div class="right">
+            <div class="content-box">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus ut velit ut leo placerat vehicula in quis nisi.
+                Curabitur quis efficitur mauris. Donec non eros molestie,
+                ultrices nulla suscipit, pharetra diam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>   
+    <section>
+      <div class="container">
+        <img src="/assets/Mosaico.png" alt="" />
+      </div>
+    </section>
+    <section id="about" class="dynamic-content section-padding">
+      <div class="container">
+        <div class="flex-grid">
+          <div class="left image-grid">
+            <img src="/assets/JosefineSilva.jpg" alt="Josefine Silva" />
+          </div>
+          <div class="right content-grid">
+            <h2 class="title two m-bottom1">My name is Josefine Silva</h2>
+            <div class="content-box">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus ut velit ut leo placerat vehicula in quis nisi.
+                Curabitur quis efficitur mauris.
+              </p>
+              <ul>
+                <li>Donec non eros molestie, ultrices nulla suscipit, pharetra diam. </li>
+                <li>Donec non eros molestie, ultrices nulla suscipit, pharetra diam. </li>
+              </ul>
+              <div class="m-top4">
+                <a href="" class="btn big">Contact us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
