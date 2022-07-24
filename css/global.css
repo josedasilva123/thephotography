@@ -1,3 +1,9 @@
+*:focus{
+  outline-width: 1px;
+  outline-style: solid;
+  outline-offset: 2px;
+  color: var(--white); 
+}
 .container {
   width: 100%;
   max-width: 1168px;

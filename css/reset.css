@@ -12,6 +12,7 @@ li {
 
 a{
   display: inline-flex;
+  color: unset;
   text-decoration: none;
 }
 
