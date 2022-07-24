@@ -16,45 +16,27 @@
   </head>
 
   <style>
-    .basic-content .flex-grid {
-      display: flex;
-      gap: 80px;
+   #recent-jobs .flex-list{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 36px;
+   }
+   #recent-jobs .flex-list .content{
+    padding: 30px 20px;
+   }
+   #recent-jobs .flex-list li{
+    display: flex;
+    flex-direction: column;
+   }
+   #recent-jobs .flex-list li:last-child{
+    flex-direction: column-reverse;
+   }
+   @media (max-width: 700px){
+    #recent-jobs .flex-list,
+    #recent-jobs .flex-list li:last-child{
+      flex-direction: column;
     }
-    @media (max-width: 700px) {
-      .basic-content .flex-grid {
-        flex-direction: column;
-        gap: 36px;
-      }
-    }
-
-    .dynamic-content .flex-grid{
-      display: flex;
-      align-items: center;
-      gap: 4rem;
-    }
-    .dynamic-content .flex-grid .left,
-    .dynamic-content .flex-grid .right{
-      width: 100%;
-    }
-    @media (max-width: 700px){
-      .dynamic-content .flex-grid{
-        flex-direction: column;
-      }
-
-      .dynamic-content.reverse .flex-grid{
-        flex-direction: column-reverse;
-      }
-
-      .dynamic-content .image-grid{
-        display: flex;
-        justify-content: center;
-      }
-    }
-    @media (max-width: 425px){
-      .dynamic-content .flex-grid .content-grid .btn{ 
-        width: 100%;
-      }  
-    }
+   }
   </style>
 
   <body>
@@ -78,80 +60,103 @@
         </div>
       </div>
     </header>
-    <section id="main-banner" class="dynamic-content reverse">
-      <div class="container">
-        <div class="flex-grid">
-          <div class="left content-grid">
-            <label class="label">Photo website</label>
-
-            <h1 class="title one m-bottom1">The Photography</h1>
-
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              ut velit ut leo placerat vehicula in quis nisi. Curabitur quis
-              efficitur mauris. Donec non eros molestie, ultrices nulla
-              suscipit, pharetra diam.
-            </p>
-
-            <div class="m-top4">
-              <a href="" class="btn big">Read more</a>
-            </div>
-          </div>
-          <div class="right image-grid">
-            <img src="/assets/Foto1.jpg" alt="Close olho" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="basic-content section-padding">
-      <div class="container">
-        <div class="flex-grid">
-          <div class="left">
-            <h2 class="title two">I love photography</h2>
-          </div>
-          <div class="right">
-            <div class="content-box">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus ut velit ut leo placerat vehicula in quis nisi.
-                Curabitur quis efficitur mauris. Donec non eros molestie,
-                ultrices nulla suscipit, pharetra diam.
+    <main>
+      <section id="main-banner" class="dynamic-content reverse">
+        <div class="container">
+          <div class="flex-grid">
+            <div class="left content-grid">
+              <label class="label">Photo website</label>
+  
+              <h1 class="title one m-bottom1">The Photography</h1>
+  
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                ut velit ut leo placerat vehicula in quis nisi. Curabitur quis
+                efficitur mauris. Donec non eros molestie, ultrices nulla
+                suscipit, pharetra diam.
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>   
-    <section>
-      <div class="container">
-        <img src="/assets/Mosaico.png" alt="" />
-      </div>
-    </section>
-    <section id="about" class="dynamic-content section-padding">
-      <div class="container">
-        <div class="flex-grid">
-          <div class="left image-grid">
-            <img src="/assets/JosefineSilva.jpg" alt="Josefine Silva" />
-          </div>
-          <div class="right content-grid">
-            <h2 class="title two m-bottom1">My name is Josefine Silva</h2>
-            <div class="content-box">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus ut velit ut leo placerat vehicula in quis nisi.
-                Curabitur quis efficitur mauris.
-              </p>
-              <ul>
-                <li>Donec non eros molestie, ultrices nulla suscipit, pharetra diam. </li>
-                <li>Donec non eros molestie, ultrices nulla suscipit, pharetra diam. </li>
-              </ul>
+  
               <div class="m-top4">
-                <a href="" class="btn big">Contact us</a>
+                <a href="" class="btn big">Read more</a>
+              </div>
+            </div>
+            <div class="right image-grid">
+              <img src="/assets/Foto1.jpg" alt="Close olho" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="basic-content section-padding">
+        <div class="container">
+          <div class="flex-grid">
+            <div class="left">
+              <h2 class="title two">I love photography</h2>
+            </div>
+            <div class="right">
+              <div class="content-box">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus ut velit ut leo placerat vehicula in quis nisi.
+                  Curabitur quis efficitur mauris. Donec non eros molestie,
+                  ultrices nulla suscipit, pharetra diam.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>   
+      <section>
+        <div class="container">
+          <img src="/assets/Mosaico.png" alt="Mosaico com fotos de casal" />
+        </div>
+      </section>
+      <section id="about" class="dynamic-content section-padding">
+        <div class="container">
+          <div class="flex-grid">
+            <div class="left image-grid">
+              <img src="/assets/JosefineSilva.jpg" alt="Josefine Silva" />
+            </div>
+            <div class="right content-grid">
+              <h2 class="title two m-bottom1">My name is Josefine Silva</h2>
+              <div class="content-box">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus ut velit ut leo placerat vehicula in quis nisi.
+                  Curabitur quis efficitur mauris.
+                </p>
+                <ul>
+                  <li>Donec non eros molestie, ultrices nulla suscipit, pharetra diam. </li>
+                  <li>Donec non eros molestie, ultrices nulla suscipit, pharetra diam. </li>
+                </ul>
+                <div class="m-top4">
+                  <a href="" class="btn big">Contact us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="recent-jobs">
+        <div class="container">
+          <h2 class="title two center m-bottom4">Recent Jobs</h2>
+          <ul class="flex-list">
+            <li>
+              <div class="content">
+                  <h3 class="title three m-bottom1">Job number 1</h3>
+                  <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut velit ut leo placerat vehicula in quis nisi. </p>
+              </div>
+              <img src="/assets/FotoJob1.jpg" alt="">
+            </li>
+            <li>
+              <div class="content">
+                  <h3 class="title three m-bottom1">Job number 2</h3>
+                  <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut velit ut leo placerat vehicula in quis nisi. </p>
+              </div>
+              <img src="/assets/FotoJob2.jpg" alt="">
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>   
   </body>
 </html>

@@ -26,6 +26,7 @@ header .flex-grid {
   align-items: center;
   justify-content: space-between;
 }
+
 @media (max-width: 750px) {
   header .flex-grid {
     gap: 16px;
@@ -33,6 +34,7 @@ header .flex-grid {
     flex-direction: column;
   }
 }
+
 @media (max-width: 580px) {
   header .menu {
     width: 100%;
@@ -40,8 +42,53 @@ header .flex-grid {
     align-items: center;
   }
 }
+
 @media (max-width: 425px) {
   .menu button {
     width: 100%;
   }
+}
+
+.basic-content .flex-grid {
+  display: flex;
+  gap: 80px;
+}
+
+@media (max-width: 700px) {
+  .basic-content .flex-grid {
+    flex-direction: column;
+    gap: 36px;
+  }
+}
+
+.dynamic-content .flex-grid{
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.dynamic-content .flex-grid .left,
+.dynamic-content .flex-grid .right{
+  width: 100%;
+}
+
+@media (max-width: 700px){
+  .dynamic-content .flex-grid{
+    flex-direction: column;
+  }
+
+  .dynamic-content.reverse .flex-grid{
+    flex-direction: column-reverse;
+  }
+
+  .dynamic-content .image-grid{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 425px){
+  .dynamic-content .flex-grid .content-grid .btn{ 
+    width: 100%;
+  }  
 }
