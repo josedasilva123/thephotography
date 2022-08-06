@@ -1,0 +1,35 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.form input[type="email"],
+.form input[type="text"],
+.form input[type="number"]{
+    width: 100%; 
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+
+    height: 56px;
+    padding: 0 18px;
+
+    color: #000;
+    border: 1px solid #000;
+}
+
+.form.white input[type="email"],
+.form.white input[type="text"],
+.form.white input[type="number"]{
+    color: #fff;
+    border-color: #fff;
+    background: transparent;
+}
+
+.form.white input[type="email"]::placeholder,
+.form.white input[type="text"]::placeholder,
+.form.white input[type="number"]::placeholder{
+    color: rgba(255, 255, 255, 0.50);
+}

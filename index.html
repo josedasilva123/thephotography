@@ -12,31 +12,148 @@
     />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/pages/index.css" />
+    <script src="https://kit.fontawesome.com/40459fc9a7.js" crossorigin="anonymous"></script>
     <title>The Photography</title>
   </head>
 
   <style>
-   #recent-jobs .flex-list{
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 36px;
-   }
-   #recent-jobs .flex-list .content{
-    padding: 30px 20px;
-   }
-   #recent-jobs .flex-list li{
-    display: flex;
-    flex-direction: column;
-   }
-   #recent-jobs .flex-list li:last-child{
-    flex-direction: column-reverse;
-   }
-   @media (max-width: 700px){
-    #recent-jobs .flex-list,
-    #recent-jobs .flex-list li:last-child{
+    #recent-jobs .flex-list {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 36px;
+    }
+    #recent-jobs .flex-list .content {
+      padding: 30px 20px;
+    }
+    #recent-jobs .flex-list li {
+      display: flex;
       flex-direction: column;
     }
-   }
+    #recent-jobs .flex-list li:last-child {
+      flex-direction: column-reverse;
+    }
+    @media (max-width: 700px) {
+      #recent-jobs .flex-list,
+      #recent-jobs .flex-list li:last-child {
+        flex-direction: column;
+      }
+    }
+    #cta .container {
+      padding: 0;
+      background: url("/assets/FundoCta.jpg") center center no-repeat;
+      background-size: cover;
+    }
+    #cta .container .overlay {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #24242440;
+      height: 500px;
+      padding: 10px;
+    }
+    #cta .container .overlay .form-box {
+      width: 100%;
+      max-width: 400px;
+    }
+    @media (max-width: 800px) {
+      #cta .container .overlay {
+        height: 380px;
+      }
+    }
+    @media (max-width: 420px) {
+      #cta .container .overlay .form-box .form .btn {
+        width: 100%;
+      }
+    }
+    #testmonials .flex-list{
+      display: flex;
+      gap: 45px;
+      margin-top: 80px;
+    }
+    #testmonials .flex-list li{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background-color: #f8f8f8;
+      padding: 30px;
+    }
+    #testmonials .flex-list li img{
+      width: 80px;
+      height: 80px;
+      margin-top: -60px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    #testmonials .flex-list li i{
+      font-size: 24px;
+    }
+    @media (max-width: 1040px){
+      #testmonials .flex-list{
+        overflow-x: scroll;
+        padding-top: 60px;
+        padding-bottom: 20px;
+        margin-right: -10px;
+        margin-top: 0px;
+      }
+      #testmonials .flex-list li{
+        min-width: 300px;
+      }
+    }
+
+    #gallery ul{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 30px;
+      height: 818px;
+    }
+
+    #gallery ul li{
+      width: calc((100% - 60px)/3);
+    }
+
+    #gallery ul li .overlay{
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 394px;
+      background-color: rgba(0,0,0, .2);
+      padding: 40px 20px;
+      opacity: 0;
+      transition: .3s;
+    }
+
+    #gallery ul li .overlay:hover{
+      opacity: 1;
+    }
+
+    #gallery ul li:nth-child(3) .overlay{
+      height: 452px;
+    }
+
+    #gallery ul li:nth-child(4) .overlay{
+      height: 336px;
+    } 
+
+    @media (max-width: 850px){
+      #gallery ul{
+        height: 1300px;
+      }
+      #gallery ul li{
+        width: calc((100% - 30px)/2);
+      } 
+    }
+    @media (max-width: 550px){
+      #gallery ul{
+        height: unset;
+      }  
+      #gallery ul li{
+        width: 100%;
+      }   
+    }
+
   </style>
 
   <body>
@@ -66,16 +183,16 @@
           <div class="flex-grid">
             <div class="left content-grid">
               <label class="label">Photo website</label>
-  
+
               <h1 class="title one m-bottom1" tabindex="0">The Photography</h1>
-  
+
               <p class="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                ut velit ut leo placerat vehicula in quis nisi. Curabitur quis
-                efficitur mauris. Donec non eros molestie, ultrices nulla
-                suscipit, pharetra diam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus ut velit ut leo placerat vehicula in quis nisi.
+                Curabitur quis efficitur mauris. Donec non eros molestie,
+                ultrices nulla suscipit, pharetra diam.
               </p>
-  
+
               <div class="m-top4">
                 <a href="" class="btn big">Read more</a>
               </div>
@@ -104,7 +221,7 @@
             </div>
           </div>
         </div>
-      </section>   
+      </section>
       <section>
         <div class="container">
           <img src="/assets/Mosaico.png" alt="Mosaico com fotos de casal" />
@@ -117,7 +234,9 @@
               <img src="/assets/JosefineSilva.jpg" alt="Josefine Silva" />
             </div>
             <div class="right content-grid">
-              <h2 class="title two m-bottom1" tabindex="0">My name is Josefine Silva</h2>
+              <h2 class="title two m-bottom1" tabindex="0">
+                My name is Josefine Silva
+              </h2>
               <div class="content-box">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -125,8 +244,14 @@
                   Curabitur quis efficitur mauris.
                 </p>
                 <ul>
-                  <li>Donec non eros molestie, ultrices nulla suscipit, pharetra diam. </li>
-                  <li>Donec non eros molestie, ultrices nulla suscipit, pharetra diam. </li>
+                  <li>
+                    Donec non eros molestie, ultrices nulla suscipit, pharetra
+                    diam.
+                  </li>
+                  <li>
+                    Donec non eros molestie, ultrices nulla suscipit, pharetra
+                    diam.
+                  </li>
                 </ul>
                 <div class="m-top4">
                   <a href="" class="btn big">Contact us</a>
@@ -142,21 +267,136 @@
           <ul class="flex-list">
             <li>
               <div class="content">
-                  <h3 class="title three m-bottom1">Job number 1</h3>
-                  <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut velit ut leo placerat vehicula in quis nisi. </p>
+                <h3 class="title three m-bottom1">Job number 1</h3>
+                <p class="paragraph">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus ut velit ut leo placerat vehicula in quis nisi.
+                </p>
               </div>
-              <img src="/assets/FotoJob1.jpg" alt="">
+              <img src="/assets/FotoJob1.jpg" alt="" />
             </li>
             <li>
               <div class="content">
-                  <h3 class="title three m-bottom1">Job number 2</h3>
-                  <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut velit ut leo placerat vehicula in quis nisi. </p>
+                <h3 class="title three m-bottom1">Job number 2</h3>
+                <p class="paragraph">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus ut velit ut leo placerat vehicula in quis nisi.
+                </p>
               </div>
-              <img src="/assets/FotoJob2.jpg" alt="">
+              <img src="/assets/FotoJob2.jpg" alt="" />
             </li>
           </ul>
         </div>
       </section>
-    </main>   
+      <section id="cta" class="section-padding">
+        <div class="container">
+          <div class="overlay">
+            <div class="form-box">
+              <h2 class="title two white center m-bottom1" tabindex="0">
+                Some Cta
+              </h2>
+              <form class="form white">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your email"
+                />
+                <button class="btn white big" type="submit">Sign up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testmonials">
+        <div class="container">
+          <h2 class="title two m-bottom2" tabindex="0">Testmonials</h2>
+          <ul class="flex-list scrollbar">
+            <li>
+              <img src="/assets/MaryAndJane.png" alt="Mary and Jane">
+              <p class="paragraph italic m-top2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus ut velit ut leo placerat vehicula in quis nisi.
+              </p>
+              <h3 class="title four center m-top3">
+                Mary and Jane
+              </h3>
+              <div class="m-top1">
+                <a href="" aria-label="instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>              
+            </li>
+            <li>
+              <img src="/assets/Ruby.png" alt="Ruby">
+              <p class="paragraph italic m-top2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus ut velit ut leo placerat vehicula in quis nisi.
+              </p>
+              <h3 class="title four center m-top3">
+                Ruby
+              </h3>
+              <div class="m-top1">
+                <a href="" aria-label="instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </li>
+            <li>
+              <img src="/assets/Joseph.png" alt="Joseph">
+              <p class="paragraph italic m-top2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus ut velit ut leo placerat vehicula in quis nisi.
+              </p>
+              <h3 class="title four center m-top3">
+                Joseph
+              </h3>
+              <div class="m-top1">
+                <a href="" aria-label="instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="gallery" class="section-padding">
+        <div class="container">
+          <h2 class="title two m-bottom2">Portfólio</h2>
+          <ul>
+            <li style="background: url('/assets/FotoGaleria7.jpg') center center no-repeat; background-size: cover;">
+              <div class="overlay">
+                <a href="" class="btn white big">Read more</a>
+              </div>
+            </li>
+            <li style="background: url('/assets/FotoGaleria1.jpg') center center no-repeat; background-size: cover;">
+              <div class="overlay">
+                <a href="" class="btn white big">Read more</a>
+              </div>
+            </li>
+            <li style="background: url('/assets/FotoGaleria3.jpg') center center no-repeat; background-size: cover;">
+              <div class="overlay">
+                <a href="" class="btn white big">Read more</a>
+              </div>
+            </li>
+            <li style="background: url('/assets/FotoGaleria4.jpg') center center no-repeat; background-size: cover;">
+              <div class="overlay">
+                <a href="" class="btn white big">Read more</a>
+              </div>
+            </li>
+            <li style="background: url('/assets/FotoGaleria5.jpg') center center no-repeat; background-size: cover;">
+              <div class="overlay">
+                <a href="" class="btn white big">Read more</a>
+              </div>
+            </li>
+            <li style="background: url('/assets/FotoGaleria6.jpg') center center no-repeat; background-size: cover;">
+              <div class="overlay">
+                <a href="" class="btn white big">Read more</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
