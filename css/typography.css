@@ -1,7 +1,7 @@
 .title {
   font-family: "Lora", serif;
   font-weight: 500;
-  color: #000000;
+  color: var(--black);
 }
 
 .title.one {
@@ -61,6 +61,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
+  color: var(--black);
 }
 
 .paragraph{
@@ -68,6 +69,7 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 1.6;
+  color: var(--black);
 }
 .title.italic,
 .label.italic,
@@ -84,8 +86,14 @@
 .title.white,
 .label.white,
 .paragraph.white {
-  color: #fff;
+  color: var(--white);
 }
+.title.default-white,
+.label.default-white,
+.paragraph.default-white {
+  color: var(--default-white);
+}
+
 
 .content-box{
   display: flex;
@@ -99,6 +107,7 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 1.6; 
+  color: var(--black);
 }
 
 .context-box b{

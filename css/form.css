@@ -16,20 +16,38 @@
     height: 56px;
     padding: 0 18px;
 
-    color: #000;
-    border: 1px solid #000;
+    background: transparent;
+    color: var(--black);
+    border: 1px solid var(--black);
 }
 
 .form.white input[type="email"],
 .form.white input[type="text"],
 .form.white input[type="number"]{
-    color: #fff;
-    border-color: #fff;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
     background: transparent;
 }
 
 .form.white input[type="email"]::placeholder,
 .form.white input[type="text"]::placeholder,
 .form.white input[type="number"]::placeholder{
-    color: rgba(255, 255, 255, 0.50);
+    color: var(--white50);
+}
+.form textarea{
+    min-width: 100%; 
+    max-width: 100%;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+
+    min-height: 125px;
+    max-height: 180px;
+
+    padding: 18px;
+
+    background: transparent;
+    color: var(--black);
+    border: 1px solid var(--black);   
 }

@@ -11,10 +11,10 @@ header .menu ul {
 
 header .menu a {
   cursor: pointer;
-
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  color: var(--black);
 }
 
 header .menu a:hover {
@@ -93,3 +93,160 @@ header .flex-grid {
   }  
 }
 
+#recent-jobs .flex-list {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 36px;
+}
+#recent-jobs .flex-list .content {
+  padding: 30px 20px;
+}
+#recent-jobs .flex-list li {
+  display: flex;
+  flex-direction: column;
+}
+#recent-jobs .flex-list li:last-child {
+  flex-direction: column-reverse;
+}
+@media (max-width: 700px) {
+  #recent-jobs .flex-list,
+  #recent-jobs .flex-list li:last-child {
+    flex-direction: column;
+  }
+}
+#cta .container {
+  padding: 0;
+  background: url("/assets/FundoCta.jpg") center center no-repeat;
+  background-size: cover;
+}
+#cta .container .overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #24242440;
+  height: 500px;
+  padding: 10px;
+}
+#cta .container .overlay .form-box {
+  width: 100%;
+  max-width: 400px;
+}
+@media (max-width: 800px) {
+  #cta .container .overlay {
+    height: 380px;
+  }
+}
+@media (max-width: 420px) {
+  #cta .container .overlay .form-box .form .btn {
+    width: 100%;
+  }
+}
+#testmonials .flex-list{
+  display: flex;
+  gap: 45px;
+  margin-top: 80px;
+}
+
+#testmonials .flex-list li{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--gray);
+  padding: 30px;
+}
+#testmonials .flex-list li img{
+  width: 80px;
+  height: 80px;
+  margin-top: -60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#testmonials .flex-list li i{
+  font-size: 24px;
+  color: var(--black);
+}
+/*
+@media (max-width: 850px){
+  #testmonials .flex-list li{
+    width: calc((100% - 45px)/2);
+  }  
+}
+@media (max-width: 560px){
+  #testmonials .flex-list li{
+    width: 100%;
+  }    
+}
+*/
+
+@media (max-width: 1040px){
+  #testmonials .flex-list{
+    overflow-x: scroll;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    margin-right: -10px;
+    margin-top: 0px;
+  }
+  #testmonials .flex-list li{
+    min-width: 300px;
+  }
+}    
+
+#gallery ul{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  height: 818px;
+}
+
+#gallery ul li{
+  width: calc((100% - 60px)/3);
+}
+
+#gallery ul li .overlay{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 394px;
+  background-color: rgba(0,0,0, .2);
+  padding: 40px 20px;
+  opacity: 0;
+  transition: .3s;
+}
+
+#gallery ul li .overlay:hover{
+  opacity: 1;
+}
+
+#gallery ul li:nth-child(3) .overlay{
+  height: 452px;
+}
+
+#gallery ul li:nth-child(4) .overlay{
+  height: 336px;
+} 
+
+@media (max-width: 850px){
+  #gallery ul{
+    height: 1300px;
+  }
+  #gallery ul li{
+    width: calc((100% - 30px)/2);
+  } 
+}
+
+@media (max-width: 550px){
+  #gallery ul{
+    height: unset;
+  }  
+  #gallery ul li{
+    width: 100%;
+  }   
+}
+
+#contact .form{
+  max-width: 400px;
+  margin: 3rem auto 0;
+}
